@@ -14,7 +14,9 @@ const ChatWindow = ({ onClose }) => {
     const [input, setInput] = useState("");
     const [loading, setLoading] = useState(false);
     const scrollRef = useRef(null);
+    const chatRef = useRef(null);
 
+    // Handle sending messages
     const handleSend = async () => {
         if (!input.trim()) return;
 
@@ -48,16 +50,31 @@ const ChatWindow = ({ onClose }) => {
         setLoading(false);
     };
 
-    // Scroll to bottom on new message
+    // Scroll to bottom when messages change
     useEffect(() => {
         if (scrollRef.current) {
             scrollRef.current.scrollTop = scrollRef.current.scrollHeight;
         }
     }, [messages, loading]);
 
-    return (
-        <div className="fixed bottom-24 right-6 w-80 md:w-96 bg-white/95 dark:bg-neutral-900/95 rounded-xl shadow-2xl border border-gray-200 dark:border-neutral-700 z-50 flex flex-col overflow-hidden backdrop-blur-md">
+    // Close when clicking outside
+    useEffect(() => {
+        const handleClickOutside = (event) => {
+            if (chatRef.current && !chatRef.current.contains(event.target)) {
+                onClose();
+            }
+        };
+        document.addEventListener("mousedown", handleClickOutside);
+        return () => {
+            document.removeEventListener("mousedown", handleClickOutside);
+        };
+    }, [onClose]);
 
+    return (
+        <div
+            ref={chatRef}
+            className="fixed bottom-24 right-6 w-80 md:w-96 bg-white/95 dark:bg-neutral-900/95 rounded-xl shadow-2xl border border-gray-200 dark:border-neutral-700 z-50 flex flex-col overflow-hidden backdrop-blur-md"
+        >
             {/* Header */}
             <div className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-4 py-3 flex justify-between items-center">
                 <h3 className="font-semibold text-sm md:text-base">Aditya's Assistant</h3>
@@ -73,6 +90,7 @@ const ChatWindow = ({ onClose }) => {
             <div
                 ref={scrollRef}
                 className="flex-1 overflow-y-auto p-4 flex flex-col gap-2 scrollbar-thin scrollbar-thumb-gray-300 dark:scrollbar-thumb-neutral-700 scrollbar-track-gray-100 dark:scrollbar-track-neutral-900"
+                style={{ maxHeight: "400px" }} // ensures scrolling works
             >
                 {messages.map((msg, idx) => (
                     <div
