@@ -1,0 +1,37 @@
+[
+    {
+        "id": 1,
+        "name": "React",
+        "level": "Advanced"
+    },
+    {
+        "id": 2,
+        "name": "Node.js",
+        "level": "Intermediate"
+    },
+    {
+        "id": 3,
+        "name": "Express.js",
+        "level": "Intermediate"
+    },
+    {
+        "id": 4,
+        "name": "MongoDB",
+        "level": "Intermediate"
+    },
+    {
+        "id": 5,
+        "name": "MySQL",
+        "level": "Intermediate"
+    },
+    {
+        "id": 6,
+        "name": "Tailwind CSS",
+        "level": "Advanced"
+    },
+    {
+        "id": 7,
+        "name": "Core Java",
+        "level": "Advanced"
+    }
+]

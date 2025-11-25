@@ -1,0 +1,47 @@
+[
+    {
+        "id": 1,
+        "title": "HireUp – Job Portal Platform",
+        "description": "A full-stack job portal with job search, saved jobs, user profiles, employer dashboards, and secure role-based authentication.",
+        "tech": [
+            "React 19",
+            "Vite",
+            "Tailwind CSS",
+            "Supabase",
+            "Clerk",
+            "React Router"
+        ],
+        "github": "https://github.com/itsaditya0108/hireup",
+        "live": "https://hireup-seven.vercel.app/jobs",
+        "image": "/hireup.png"
+    },
+    {
+        "id": 2,
+        "title": "Craftly – AI-Powered UI Component Generator",
+        "description": "An AI tool that generates responsive UI components from text prompts with live preview, editor, dark mode, and multi-framework output.",
+        "tech": [
+            "React",
+            "Tailwind CSS",
+            "Google Gemini",
+            "JavaScript"
+        ],
+        "github": "hhttps://github.com/itsaditya0108/craftly-ai",
+        "live": "https://craftly-ai.netlify.app/",
+        "image": "/craflty.png"
+    },
+    {
+        "id": 3,
+        "title": "Biblosphere – Book Marketplace",
+        "description": "A full-stack Java-based book marketplace with user authentication, CRUD operations, search filters, order management, and Razorpay payment.",
+        "tech": [
+            "Java",
+            "JSP",
+            "Servlets",
+            "MySQL",
+            "Razorpay API"
+        ],
+        "github": "https://github.com/itsaditya0108/Biblosphere",
+        "live": "https://github.com/itsaditya0108/Biblosphere",
+        "image": "/biblo.png"
+    }
+]
