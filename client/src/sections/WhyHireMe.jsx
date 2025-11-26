@@ -45,8 +45,7 @@ const WhyHireMe = () => {
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.5, delay: 0.15 }}
                 >
-                    In this short video, I talk about my background, how I approach problems,
-                    and why I&apos;d be a good fit for roles involving frontend, backend, and AI integration.
+                    In this short video, I talk about my background, how I solve problems, and why I’d be a good fit for frontend, backend, and AI-related roles. My voice is a bit unclear because I’ve had a cold recently, but I still wanted to share this.
                 </motion.p>
 
                 {/* Video */}
